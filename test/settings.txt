@@ -1,0 +1,16 @@
+IPCFILE=ipc:./testchain/geth.ipc
+PASSWORD=testtest
+
+FUNFAIRSALESOL=../contracts/FunFairSale-new.sol
+FUNFAIRSALETEMPSOL=FunFairSale.sol
+FUNFAIRSALEJS=FunFairSale.js
+
+TOKENCONTROLLERLEDGERSOL=../contracts/TokenControllerLedger.sol
+TOKENCONTROLLERLEDGERTEMPSOL=TokenControllerLedger.sol
+TOKENCONTROLLERLEDGERJS=TokenControllerLedger.js
+
+DEPLOYMENTDATA=deploymentData.txt
+
+INCLUDEJS=./include.js
+TEST1OUTPUT=test1output.txt
+TEST1RESULTS=test1results.txt

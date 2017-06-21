@@ -1,0 +1,128 @@
+ # Account                                             EtherBalanceChange                          Token Name
+-- ------------------------------------------ --------------------------- ------------------------------ ---------------------------
+ 1 0xa00af22d07c87d96eeeb0ed583f8f6ac7812827e       40.000000000000000000           0.000000000000000000 Account #0 - Miner
+ 2 0xa11aae29840fbb5c86e6fd4cf809eba183aef433        0.000000000000000000           0.000000000000000000 Account #1 - Contract Owner
+ 3 0xa22ab8a9d641ce77e06d98b7d7065d324d3d6976        0.000000000000000000           0.000000000000000000 Account #2 - KYCed
+ 4 0xa33a6c312d9ad0e0f2e95541beed0cc081621fd0        0.000000000000000000           0.000000000000000000 Account #3 - KYCed
+ 5 0xa44a08d3f6933c69212114bb66e2df1813651844        0.000000000000000000           0.000000000000000000 Account #4
+ 6 0xa55a151eb00fded1634d27d1127b4be4627079ea        0.000000000000000000           0.000000000000000000 Account #5
+ 7 0xa66a85ede0cbe03694aa9d9de0bb19c99ff55bd9        0.000000000000000000           0.000000000000000000 Account #6
+ 8 0xa77a2b9d4b1c010a22a7c565dc418cef683dbcec        0.000000000000000000           0.000000000000000000 Account #7
+ 9 0xa88a05d2b88283ce84c8325760b72a64591279a2        0.000000000000000000           0.000000000000000000 Account #8
+-- ------------------------------------------ --------------------------- ------------------------------ ---------------------------
+                                                                                    0.000000000000000000 Total Token Balances
+-- ------------------------------------------ --------------------------- ------------------------------ ---------------------------
+
+
+Deploy FunFairSale Contract
+ffsAddress=0xe6ada9beed6e24be4c0259383db61b52bfca85f3 gas=6000000 gasUsed=518439 costETH=0.009331902 costUSD=3.54976220178 @ ETH/USD=380.39 gasPrice=18000000000 block=716 txId=0xb271aadcf8976c5afb68724417153ad780b0767aefad950139375c94f384abd4
+ # Account                                             EtherBalanceChange                          Token Name
+-- ------------------------------------------ --------------------------- ------------------------------ ---------------------------
+ 1 0xa00af22d07c87d96eeeb0ed583f8f6ac7812827e       50.009331902000000000           0.000000000000000000 Account #0 - Miner
+ 2 0xa11aae29840fbb5c86e6fd4cf809eba183aef433       -0.009331902000000000           0.000000000000000000 Account #1 - Contract Owner
+ 3 0xa22ab8a9d641ce77e06d98b7d7065d324d3d6976        0.000000000000000000           0.000000000000000000 Account #2 - KYCed
+ 4 0xa33a6c312d9ad0e0f2e95541beed0cc081621fd0        0.000000000000000000           0.000000000000000000 Account #3 - KYCed
+ 5 0xa44a08d3f6933c69212114bb66e2df1813651844        0.000000000000000000           0.000000000000000000 Account #4
+ 6 0xa55a151eb00fded1634d27d1127b4be4627079ea        0.000000000000000000           0.000000000000000000 Account #5
+ 7 0xa66a85ede0cbe03694aa9d9de0bb19c99ff55bd9        0.000000000000000000           0.000000000000000000 Account #6
+ 8 0xa77a2b9d4b1c010a22a7c565dc418cef683dbcec        0.000000000000000000           0.000000000000000000 Account #7
+ 9 0xa88a05d2b88283ce84c8325760b72a64591279a2        0.000000000000000000           0.000000000000000000 Account #8
+10 0xe6ada9beed6e24be4c0259383db61b52bfca85f3        0.000000000000000000           0.000000000000000000 FunFairSale
+-- ------------------------------------------ --------------------------- ------------------------------ ---------------------------
+                                                                                    0.000000000000000000 Total Token Balances
+-- ------------------------------------------ --------------------------- ------------------------------ ---------------------------
+
+PASS Deploy FunFairSale Contract
+ffsContractAddress=0xe6ada9beed6e24be4c0259383db61b52bfca85f3
+ffsContractAbi=[{"constant":true,"inputs":[],"name":"deadline","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":false,"inputs":[],"name":"withdraw","outputs":[],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_cap","type":"uint256"}],"name":"setCap","outputs":[],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"t","type":"uint256"}],"name":"shortenDeadline","outputs":[],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_token","type":"address"},{"name":"_to","type":"address"}],"name":"claimTokens","outputs":[{"name":"","type":"bool"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"startTime","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":false,"inputs":[],"name":"acceptOwnership","outputs":[],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_newOwner","type":"address"}],"name":"changeOwner","outputs":[],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_startTime","type":"uint256"},{"name":"_deadline","type":"uint256"}],"name":"setStartTime","outputs":[],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"capAmount","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"inputs":[],"payable":false,"type":"constructor"},{"payable":true,"type":"fallback"},{"anonymous":false,"inputs":[{"indexed":false,"name":"token","type":"address"},{"indexed":false,"name":"to","type":"address"},{"indexed":false,"name":"amount","type":"uint256"}],"name":"logTokenTransfer","type":"event"}]
+ffs.owner=0xa11aae29840fbb5c86e6fd4cf809eba183aef433
+ffs.startTime=1498125219 Thu, 22 Jun 2017 09:53:39 UTC / Thu, 22 Jun 2017 09:53:39 GMT
+ffs.deadline=1498125324 Thu, 22 Jun 2017 09:55:24 UTC / Thu, 22 Jun 2017 09:55:24 GMT
+ffs.capAmount=1000
+
+Send Invalid Contribution - 100 ETH From Account2 Before Start Date
+sendInvalidContributionTx gas=400000 gasUsed=400000 costETH=0.0072 costUSD=2.738808 @ ETH/USD=380.39 gasPrice=18000000000 block=718 txId=0x8be3778d964963c787cf7826a3fc1c49b61461105cb22eac2d9aabc7ffedbf3f
+ # Account                                             EtherBalanceChange                          Token Name
+-- ------------------------------------------ --------------------------- ------------------------------ ---------------------------
+ 1 0xa00af22d07c87d96eeeb0ed583f8f6ac7812827e       60.016531902000000000           0.000000000000000000 Account #0 - Miner
+ 2 0xa11aae29840fbb5c86e6fd4cf809eba183aef433       -0.009331902000000000           0.000000000000000000 Account #1 - Contract Owner
+ 3 0xa22ab8a9d641ce77e06d98b7d7065d324d3d6976       -0.007200000000000000           0.000000000000000000 Account #2 - KYCed
+ 4 0xa33a6c312d9ad0e0f2e95541beed0cc081621fd0        0.000000000000000000           0.000000000000000000 Account #3 - KYCed
+ 5 0xa44a08d3f6933c69212114bb66e2df1813651844        0.000000000000000000           0.000000000000000000 Account #4
+ 6 0xa55a151eb00fded1634d27d1127b4be4627079ea        0.000000000000000000           0.000000000000000000 Account #5
+ 7 0xa66a85ede0cbe03694aa9d9de0bb19c99ff55bd9        0.000000000000000000           0.000000000000000000 Account #6
+ 8 0xa77a2b9d4b1c010a22a7c565dc418cef683dbcec        0.000000000000000000           0.000000000000000000 Account #7
+ 9 0xa88a05d2b88283ce84c8325760b72a64591279a2        0.000000000000000000           0.000000000000000000 Account #8
+10 0xe6ada9beed6e24be4c0259383db61b52bfca85f3        0.000000000000000000           0.000000000000000000 FunFairSale
+-- ------------------------------------------ --------------------------- ------------------------------ ---------------------------
+                                                                                    0.000000000000000000 Total Token Balances
+-- ------------------------------------------ --------------------------- ------------------------------ ---------------------------
+
+PASS Send Invalid Contribution - 100 ETH From Account2 Before Start Date
+ffsContractAddress=0xe6ada9beed6e24be4c0259383db61b52bfca85f3
+ffsContractAbi=[{"constant":true,"inputs":[],"name":"deadline","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":false,"inputs":[],"name":"withdraw","outputs":[],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_cap","type":"uint256"}],"name":"setCap","outputs":[],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"t","type":"uint256"}],"name":"shortenDeadline","outputs":[],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_token","type":"address"},{"name":"_to","type":"address"}],"name":"claimTokens","outputs":[{"name":"","type":"bool"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"startTime","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":false,"inputs":[],"name":"acceptOwnership","outputs":[],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_newOwner","type":"address"}],"name":"changeOwner","outputs":[],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_startTime","type":"uint256"},{"name":"_deadline","type":"uint256"}],"name":"setStartTime","outputs":[],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"capAmount","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"inputs":[],"payable":false,"type":"constructor"},{"payable":true,"type":"fallback"},{"anonymous":false,"inputs":[{"indexed":false,"name":"token","type":"address"},{"indexed":false,"name":"to","type":"address"},{"indexed":false,"name":"amount","type":"uint256"}],"name":"logTokenTransfer","type":"event"}]
+ffs.owner=0xa11aae29840fbb5c86e6fd4cf809eba183aef433
+ffs.startTime=1498125219 Thu, 22 Jun 2017 09:53:39 UTC / Thu, 22 Jun 2017 09:53:39 GMT
+ffs.deadline=1498125324 Thu, 22 Jun 2017 09:55:24 UTC / Thu, 22 Jun 2017 09:55:24 GMT
+ffs.capAmount=1000
+
+Waiting until startTime at 1498125219 Thu, 22 Jun 2017 19:53:39 AEST currentDate=Thu, 22 Jun 2017 19:53:19 AEST
+Waited until startTime at 1498125219 Thu, 22 Jun 2017 19:53:39 AEST currentDate=Thu, 22 Jun 2017 19:53:39 AEST
+Send Invalid Contribution - 100 ETH From Account2 With Too High Gas Price
+Send Valid Contribution - 100 ETH From Account3
+Send Valid Contribution - 890 ETH From Account3 - Sale Over Due To Cap Check Bug
+sendInvalidContribution1Tx gas=400000 gasUsed=400000 costETH=0.024 costUSD=9.12936 @ ETH/USD=380.39 gasPrice=60000000000 block=724 txId=0x5d92b775032b4053b3f70dee452e90878565e1e850e8977025d78f4198e07896
+sendValidContribution1Tx gas=400000 gasUsed=21490 costETH=0.00038682 costUSD=0.1471424598 @ ETH/USD=380.39 gasPrice=18000000000 block=724 txId=0xb80ee2bf1f8174c591cd00677ee3f901640539d2b0f3f1514c5ade2d653e74c8
+sendValidContribution2Tx gas=400000 gasUsed=26495 costETH=0.00047691 costUSD=0.1814117949 @ ETH/USD=380.39 gasPrice=18000000000 block=724 txId=0xe5497f8e54b4e0c0ccddd914da2947f8d308ad05e44fe357c3800758e44a0ad4
+ # Account                                             EtherBalanceChange                          Token Name
+-- ------------------------------------------ --------------------------- ------------------------------ ---------------------------
+ 1 0xa00af22d07c87d96eeeb0ed583f8f6ac7812827e       90.041395632000000000           0.000000000000000000 Account #0 - Miner
+ 2 0xa11aae29840fbb5c86e6fd4cf809eba183aef433       -0.009331902000000000           0.000000000000000000 Account #1 - Contract Owner
+ 3 0xa22ab8a9d641ce77e06d98b7d7065d324d3d6976       -0.031200000000000000           0.000000000000000000 Account #2 - KYCed
+ 4 0xa33a6c312d9ad0e0f2e95541beed0cc081621fd0     -990.000863730000000000           0.000000000000000000 Account #3 - KYCed
+ 5 0xa44a08d3f6933c69212114bb66e2df1813651844        0.000000000000000000           0.000000000000000000 Account #4
+ 6 0xa55a151eb00fded1634d27d1127b4be4627079ea        0.000000000000000000           0.000000000000000000 Account #5
+ 7 0xa66a85ede0cbe03694aa9d9de0bb19c99ff55bd9        0.000000000000000000           0.000000000000000000 Account #6
+ 8 0xa77a2b9d4b1c010a22a7c565dc418cef683dbcec        0.000000000000000000           0.000000000000000000 Account #7
+ 9 0xa88a05d2b88283ce84c8325760b72a64591279a2        0.000000000000000000           0.000000000000000000 Account #8
+10 0xe6ada9beed6e24be4c0259383db61b52bfca85f3      990.000000000000000000           0.000000000000000000 FunFairSale
+-- ------------------------------------------ --------------------------- ------------------------------ ---------------------------
+                                                                                    0.000000000000000000 Total Token Balances
+-- ------------------------------------------ --------------------------- ------------------------------ ---------------------------
+
+PASS Send Invalid Contribution - 100 ETH From Account2 With Too High Gas Price
+PASS Send Valid Contribution - 100 ETH From Account3
+PASS Send Valid Contribution - 890 ETH From Account3 - Sale Over Due To Cap Check Bug
+ffsContractAddress=0xe6ada9beed6e24be4c0259383db61b52bfca85f3
+ffsContractAbi=[{"constant":true,"inputs":[],"name":"deadline","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":false,"inputs":[],"name":"withdraw","outputs":[],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_cap","type":"uint256"}],"name":"setCap","outputs":[],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"t","type":"uint256"}],"name":"shortenDeadline","outputs":[],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_token","type":"address"},{"name":"_to","type":"address"}],"name":"claimTokens","outputs":[{"name":"","type":"bool"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"startTime","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":false,"inputs":[],"name":"acceptOwnership","outputs":[],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_newOwner","type":"address"}],"name":"changeOwner","outputs":[],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_startTime","type":"uint256"},{"name":"_deadline","type":"uint256"}],"name":"setStartTime","outputs":[],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"capAmount","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"inputs":[],"payable":false,"type":"constructor"},{"payable":true,"type":"fallback"},{"anonymous":false,"inputs":[{"indexed":false,"name":"token","type":"address"},{"indexed":false,"name":"to","type":"address"},{"indexed":false,"name":"amount","type":"uint256"}],"name":"logTokenTransfer","type":"event"}]
+ffs.owner=0xa11aae29840fbb5c86e6fd4cf809eba183aef433
+ffs.startTime=1498125219 Thu, 22 Jun 2017 09:53:39 UTC / Thu, 22 Jun 2017 09:53:39 GMT
+ffs.deadline=1498125231 Thu, 22 Jun 2017 09:53:51 UTC / Thu, 22 Jun 2017 09:53:51 GMT
+ffs.capAmount=1000
+
+Send Invalid Contribution - 1 ETH From Account4 - Sale Closed Due To Cap Check Bug
+sendInvalidContribution2Tx gas=400000 gasUsed=400000 costETH=0.024 costUSD=9.12936 @ ETH/USD=380.39 gasPrice=60000000000 block=726 txId=0x5a84f295917ff963a9097f7114a7f15f65ee2de788dde1f5e735f5190ee9c6bc
+ # Account                                             EtherBalanceChange                          Token Name
+-- ------------------------------------------ --------------------------- ------------------------------ ---------------------------
+ 1 0xa00af22d07c87d96eeeb0ed583f8f6ac7812827e      100.065395632000000000           0.000000000000000000 Account #0 - Miner
+ 2 0xa11aae29840fbb5c86e6fd4cf809eba183aef433       -0.009331902000000000           0.000000000000000000 Account #1 - Contract Owner
+ 3 0xa22ab8a9d641ce77e06d98b7d7065d324d3d6976       -0.055200000000000000           0.000000000000000000 Account #2 - KYCed
+ 4 0xa33a6c312d9ad0e0f2e95541beed0cc081621fd0     -990.000863730000000000           0.000000000000000000 Account #3 - KYCed
+ 5 0xa44a08d3f6933c69212114bb66e2df1813651844        0.000000000000000000           0.000000000000000000 Account #4
+ 6 0xa55a151eb00fded1634d27d1127b4be4627079ea        0.000000000000000000           0.000000000000000000 Account #5
+ 7 0xa66a85ede0cbe03694aa9d9de0bb19c99ff55bd9        0.000000000000000000           0.000000000000000000 Account #6
+ 8 0xa77a2b9d4b1c010a22a7c565dc418cef683dbcec        0.000000000000000000           0.000000000000000000 Account #7
+ 9 0xa88a05d2b88283ce84c8325760b72a64591279a2        0.000000000000000000           0.000000000000000000 Account #8
+10 0xe6ada9beed6e24be4c0259383db61b52bfca85f3      990.000000000000000000           0.000000000000000000 FunFairSale
+-- ------------------------------------------ --------------------------- ------------------------------ ---------------------------
+                                                                                    0.000000000000000000 Total Token Balances
+-- ------------------------------------------ --------------------------- ------------------------------ ---------------------------
+
+PASS Send Invalid Contribution - 1 ETH From Account4 - Sale Closed Due To Cap Check Bug
+ffsContractAddress=0xe6ada9beed6e24be4c0259383db61b52bfca85f3
+ffsContractAbi=[{"constant":true,"inputs":[],"name":"deadline","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":false,"inputs":[],"name":"withdraw","outputs":[],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_cap","type":"uint256"}],"name":"setCap","outputs":[],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"t","type":"uint256"}],"name":"shortenDeadline","outputs":[],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_token","type":"address"},{"name":"_to","type":"address"}],"name":"claimTokens","outputs":[{"name":"","type":"bool"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"startTime","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":false,"inputs":[],"name":"acceptOwnership","outputs":[],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_newOwner","type":"address"}],"name":"changeOwner","outputs":[],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_startTime","type":"uint256"},{"name":"_deadline","type":"uint256"}],"name":"setStartTime","outputs":[],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"capAmount","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"inputs":[],"payable":false,"type":"constructor"},{"payable":true,"type":"fallback"},{"anonymous":false,"inputs":[{"indexed":false,"name":"token","type":"address"},{"indexed":false,"name":"to","type":"address"},{"indexed":false,"name":"amount","type":"uint256"}],"name":"logTokenTransfer","type":"event"}]
+ffs.owner=0xa11aae29840fbb5c86e6fd4cf809eba183aef433
+ffs.startTime=1498125219 Thu, 22 Jun 2017 09:53:39 UTC / Thu, 22 Jun 2017 09:53:39 GMT
+ffs.deadline=1498125231 Thu, 22 Jun 2017 09:53:51 UTC / Thu, 22 Jun 2017 09:53:51 GMT
+ffs.capAmount=1000
+
