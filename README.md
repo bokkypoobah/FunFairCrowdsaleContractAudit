@@ -33,70 +33,87 @@ The smart contracts covered in this audit in the original request are:
 
 <br />
 
-A new version of [FunFairSale](contracts/FunFairSale-new.sol) has been published at [0x491ff72e7b511123b6a6c074fbaef158546982fe](https://etherscan.io/address/0x491ff72e7b511123b6a6c074fbaef158546982fe#code) with current settings:
+## Live Crowdsale Contract
+
+As listed on FunFair's website, new version of [FunFairSale](contracts/FunFairSale-new.sol) has been published at [0x55c44fbad82686afb0ca41cefb8d086cb937b2e6](https://etherscan.io/address/0x55c44fbad82686afb0ca41cefb8d086cb937b2e6#code) with current settings:
 
   * `saleTime`: `1209600`
-  * `deadline`: `1499436000` "Fri, 07 Jul 2017 14:00:00 UTC"
+  * `deadline`: `1498154048` "Thu, 22 Jun 2017 17:54:08 UTC"
   * `startTime`: `1498140000` "Thu, 22 Jun 2017 14:00:00 UTC"
   * `owner`: [`0x18250eaf72bbaa0237a662b9b85ebd8fa0cf128f`](https://etherscan.io/address/0x18250eaf72bbaa0237a662b9b85ebd8fa0cf128f)
-  * `capAmount`: `125000000000000000000000000` (125,000,000 ETH)
+  * `capAmount`: `30690851057299820000000` (30690.85105729982 ETH)
 
 This contract address has been published on FunFair's [Slack](https://funfair.slack.com/) as the crowdfunding contract.
 
 The differences between these two contracts follow:
 
 ```javascript
-Iota:contracts bok$ diff FunFairSale-new.sol FunFairSale.sol 
+$ diff -b FunFairSale-new.sol FunFairSale.sol 
 8d7
 < 
-49,55c48,51
-<     uint public deadline =  1499436000; // July 7th, 2017; 14:00 GMT
-<     uint public startTime = 1498140000; // June 22nd, 2017; 14:00 GMT
-<     uint public capAmount = 125000000 ether;
-< 
-<     // Don't allow contributions when the gas price is above
-<     // 50 Gwei to discourage gas price manipulation.
-<     uint constant MAX_GAS_PRICE = 50 * 1024 * 1024 * 1024 wei;
+49,50c48,50
+<     uint public deadline = 1499436000;
+<     uint public startTime = 1498140000;
 ---
 >     uint public deadline;
 >     uint public startTime = 123123; //set actual time here
 >     uint public saleTime = 14 days;
->     uint public capAmount;
-57c53,55
+53c53,55
 <     function FunFairSale() {}
 ---
 >     function FunFairSale() {
 >         deadline = startTime + saleTime;
 >     }
-59,60c57
-<     function shortenDeadline(uint t) onlyOwner {
-<         // Used to shorten the deadline once (if) we've hit the soft cap.
----
->     function setSoftCapDeadline(uint t) onlyOwner {
-64a62,67
->     function launch(uint _cap) onlyOwner {
+60a63,64
 >         // cap is immutable once the sale starts
 >         if (this.balance > 0) throw;
->         capAmount = _cap;
->     }
-> 
-66,67d68
-<         // Don't encourage gas price manipulation.
-<       if (tx.gasprice > MAX_GAS_PRICE) throw;
-75a77
->         if (block.timestamp < deadline) throw;
-79,82c81
-<     function setCap(uint _cap) onlyOwner {
-<         capAmount = _cap;
-<     }
+66,68c70,72
 < 
+<         if (this.balance > capAmount) {
+<             deadline = block.timestamp - 1;
 ---
+>         if (this.balance >= capAmount) throw;
+>         if (this.balance + msg.value >= capAmount) {
+>             deadline = block.timestamp;
+74,76d77
+< 
+<         //testing return value doesn't do anything here
+<         //but it stops a compiler warning
+79a81
 >     // for testing
-84c83
+81c83
 <         if (block.timestamp >= startTime) throw;
 ---
 >       if (_deadline < _startTime) throw;
 ```
+
+As of Fri, 23 Jun 2017 00:59:30 UTC, the following funds were raised at this contract address:
+
+* 34,778.830690504502596672 Ether ~ $11,147,658.60 @ $320.53/ETH
+* 19.99 Aragon ~ $54.81
+* 13,975,230 BAT ~ $2,465,020.84
+* 63,108.15461481 Golem ~ $37,296.46
+* 69,000 Guppy ~ $24,583.87
+* 50 ICONOMI ~ $240.90
+* 98.10095511 REP ~ $2,937.85
+* 10,000 SNGLS ~ $1,903.72
+* 29,886.745 SwarmCity ~ $71,449.05
+* 51,031.64 WINGS ~ $26,473.94
+
+![](images/FunFair-EtherScan-20170623-110040.png)
+
+<br />
+
+## Live Token Contract
+
+As discussed on [https://funfair.slack.com](https://funfair.slack.com), the same version of the [Token](contracts/TokenControllerAndLedger.sol#L89) contract has been published at [0xBbB1BD2D741F05E144E6C4517676a15554fD4B8D](https://etherscan.io/address/0xBbB1BD2D741F05E144E6C4517676a15554fD4B8D) with current settings:
+
+  * `name`: `FunFair`
+  * `totalSupply`: `1588932231060000000` (15889322310.6 FUN)
+  * `decimals`: `8`
+  * `owner`: [`0x50b26685bc788e164d940f0a73770f4b9196b052`](https://etherscan.io/address/0x50b26685bc788e164d940f0a73770f4b9196b052)
+  * `symbol`: `FUN`
+  * `finalized`: `False`
 
 <br />
 
