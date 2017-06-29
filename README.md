@@ -117,6 +117,12 @@ As discussed on [https://funfair.slack.com](https://funfair.slack.com), the same
 
 <br />
 
+## Update Jun 29 2017
+
+This audit is referenced in [FunFair Token Contract Audit](https://funfair.io/wp-content/uploads/2017/06/FunFair-Token-Contract-Audit.pdf) by Peter Vessenes.
+
+<br />
+
 <hr />
 
 # Table of contents
